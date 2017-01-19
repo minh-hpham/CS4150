@@ -1,0 +1,6 @@
+C:\Users\Minh\Downloads\ArraySearch\ArraySearch\MrAnaga\bin\Debug\MrAnaga.exe.config
+C:\Users\Minh\Downloads\ArraySearch\ArraySearch\MrAnaga\bin\Debug\MrAnaga.exe
+C:\Users\Minh\Downloads\ArraySearch\ArraySearch\MrAnaga\bin\Debug\MrAnaga.pdb
+C:\Users\Minh\Downloads\ArraySearch\ArraySearch\MrAnaga\obj\Debug\MrAnaga.csprojResolveAssemblyReference.cache
+C:\Users\Minh\Downloads\ArraySearch\ArraySearch\MrAnaga\obj\Debug\MrAnaga.exe
+C:\Users\Minh\Downloads\ArraySearch\ArraySearch\MrAnaga\obj\Debug\MrAnaga.pdb
