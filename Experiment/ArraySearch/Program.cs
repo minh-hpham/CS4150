@@ -12,7 +12,7 @@ namespace Experiment
     /// </summary>
     public class Timer
     {
-        public const int WORD_LENGTH = 5;
+        public const int WORD_LENGTH = 2000;
         /// <summary>
         /// The number of repetitions used in versions 2 and 3
         /// </summary>
@@ -38,7 +38,6 @@ namespace Experiment
             // Let's look at precise the Stopwatch is
             Console.WriteLine("Is high resolution: " + Stopwatch.IsHighResolution);
             Console.WriteLine("Ticks per second: " + Stopwatch.Frequency);
-            Console.WriteLine(RandomString(5));
 
             // Now do an experiment.
             RunExperiment();
@@ -52,7 +51,7 @@ namespace Experiment
 
             // Report the average time required to do a linear search for various sizes
             // of arrays.
-            int size = 32;
+            int size = 16;
             Console.WriteLine("\nSize\tTime (msec)\tRatio (msec)");
             double previousTime = 0;
             for (int i = 0; i <= 17; i++)
@@ -141,6 +140,12 @@ namespace Experiment
         /// </summary>
         public static double timeMrAnaga(int size)
         {
+            // Construct a sorted array
+            HashSet<String>[] data = new HashSet<String>[size];
+            for (int i = 0; i < size; i++)
+            {
+                data[i] = makeList(i);
+            }
             // Get the process
             Process p = Process.GetCurrentProcess();
 
@@ -155,8 +160,8 @@ namespace Experiment
                 {
                     for (int d = 0; d < size; d++)
                     {
-                        HashSet<String> list = makeList(d);
-                        mrAnaga(list);
+                       // HashSet<String> list = makeList(d);
+                        mrAnaga(data[d]);
                     }
                 }
                 TimeSpan stop = p.TotalProcessorTime;
@@ -175,7 +180,7 @@ namespace Experiment
                 {
                     for (int d = 0; d < size; d++)
                     {
-                        HashSet<String> list = makeList(d);
+                        //HashSet<String> list = makeList(d);
                     }
                 }
                 TimeSpan stop = p.TotalProcessorTime;
