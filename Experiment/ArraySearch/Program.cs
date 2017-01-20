@@ -12,7 +12,7 @@ namespace Experiment
     /// </summary>
     public class Timer
     {
-        public const int WORD_LENGTH = 2000;
+        public const int WORD_LENGTH = 5;
         /// <summary>
         /// The number of repetitions used in versions 2 and 3
         /// </summary>
@@ -51,7 +51,7 @@ namespace Experiment
 
             // Report the average time required to do a linear search for various sizes
             // of arrays.
-            int size = 16;
+            int size = 32;
             Console.WriteLine("\nSize\tTime (msec)\tRatio (msec)");
             double previousTime = 0;
             for (int i = 0; i <= 17; i++)
@@ -126,7 +126,7 @@ namespace Experiment
         public static HashSet<String> makeList(int size)
         {
             HashSet<String> list = new HashSet<string>();
-            for (int i = 0; i < size; i++)
+            for (int i = 0; i < size; i*=2)
             {
                 list.Add(RandomString(WORD_LENGTH));
             }
