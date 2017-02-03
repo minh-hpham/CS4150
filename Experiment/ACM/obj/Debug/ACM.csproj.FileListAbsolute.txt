@@ -1,0 +1,6 @@
+C:\Users\Minh\Source\Repos\CS4150\Experiment\ACM\bin\Debug\ACM.exe.config
+C:\Users\Minh\Source\Repos\CS4150\Experiment\ACM\bin\Debug\ACM.exe
+C:\Users\Minh\Source\Repos\CS4150\Experiment\ACM\bin\Debug\ACM.pdb
+C:\Users\Minh\Source\Repos\CS4150\Experiment\ACM\obj\Debug\ACM.csprojResolveAssemblyReference.cache
+C:\Users\Minh\Source\Repos\CS4150\Experiment\ACM\obj\Debug\ACM.exe
+C:\Users\Minh\Source\Repos\CS4150\Experiment\ACM\obj\Debug\ACM.pdb
