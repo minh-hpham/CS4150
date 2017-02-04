@@ -11,8 +11,8 @@ namespace GalaxyQuest
         static void Main(string[] args)
         {
             string[] split = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.None);
-            int d = Int32.Parse(split[0]);
-            int k = Int32.Parse(split[1]);
+            long d = long.Parse(split[0]);
+            long k = long.Parse(split[1]);
 
             // Array contains all stars with x and y
             List<Star> pu = new List<Star>();
@@ -20,7 +20,7 @@ namespace GalaxyQuest
             for (int i = 0; i < k; i++)
             {
                 string[] line = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.None);
-                pu.Add(new Star(Int32.Parse(line[0]), Int32.Parse(line[1])));
+                pu.Add(new Star(long.Parse(line[0]), long.Parse(line[1])));
             }
 
             Star find = findMajority(pu,d);
@@ -51,7 +51,7 @@ namespace GalaxyQuest
         }
 
 
-        public static Star findMajority(List<Star> A, int d)
+        public static Star findMajority(List<Star> A, long d)
         {
            
             if (A.Count == 0)
@@ -191,18 +191,18 @@ namespace GalaxyQuest
     }
     class Star
     {
-        public int x, y;
+        public long x, y;
 
-        public Star(int x_, int y_)
+        public Star(long x_, long y_)
         {
             x = x_;
             y = y_;
         }
 
-        public bool inGalaxy(int d, Star other)
+        public bool inGalaxy(long d, Star other)
         {
-            long result = (long)((x - other.x) * (x - other.x) + (y - other.y) * (y - other.y));
-            return result <= (long)(d * d);
+            long result = ((x - other.x) * (x - other.x) + (y - other.y) * (y - other.y));
+            return result <= (d * d);
         }
 
     }
