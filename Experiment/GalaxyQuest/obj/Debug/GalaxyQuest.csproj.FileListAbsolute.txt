@@ -1,0 +1,6 @@
+C:\Users\u0975798\Source\Repos\CS4150\Experiment\GalaxyQuest\bin\Debug\GalaxyQuest.exe.config
+C:\Users\u0975798\Source\Repos\CS4150\Experiment\GalaxyQuest\bin\Debug\GalaxyQuest.exe
+C:\Users\u0975798\Source\Repos\CS4150\Experiment\GalaxyQuest\bin\Debug\GalaxyQuest.pdb
+C:\Users\u0975798\Source\Repos\CS4150\Experiment\GalaxyQuest\obj\Debug\GalaxyQuest.csprojResolveAssemblyReference.cache
+C:\Users\u0975798\Source\Repos\CS4150\Experiment\GalaxyQuest\obj\Debug\GalaxyQuest.exe
+C:\Users\u0975798\Source\Repos\CS4150\Experiment\GalaxyQuest\obj\Debug\GalaxyQuest.pdb

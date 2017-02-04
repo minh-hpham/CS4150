@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MrAnaga", "MrAnaga\MrAnaga.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACM", "ACM\ACM.csproj", "{99DCB76E-C677-4BD3-865E-0E50787DDF6B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GalaxyQuest", "GalaxyQuest\GalaxyQuest.csproj", "{A9F97770-D60B-49F6-918F-F3BD430C14CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,14 @@ Global
 		{99DCB76E-C677-4BD3-865E-0E50787DDF6B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{99DCB76E-C677-4BD3-865E-0E50787DDF6B}.Release|x86.ActiveCfg = Release|Any CPU
 		{99DCB76E-C677-4BD3-865E-0E50787DDF6B}.Release|x86.Build.0 = Release|Any CPU
+		{A9F97770-D60B-49F6-918F-F3BD430C14CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9F97770-D60B-49F6-918F-F3BD430C14CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9F97770-D60B-49F6-918F-F3BD430C14CB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A9F97770-D60B-49F6-918F-F3BD430C14CB}.Debug|x86.Build.0 = Debug|Any CPU
+		{A9F97770-D60B-49F6-918F-F3BD430C14CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9F97770-D60B-49F6-918F-F3BD430C14CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9F97770-D60B-49F6-918F-F3BD430C14CB}.Release|x86.ActiveCfg = Release|Any CPU
+		{A9F97770-D60B-49F6-918F-F3BD430C14CB}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
