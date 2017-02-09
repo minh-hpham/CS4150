@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A9F97770-D60B-49F6-918F-F3BD430C14CB}</ProjectGuid>
+    <ProjectGuid>{49E42743-8B52-4B2B-89FA-EAF1E43BCDF8}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GalaxyQuest</RootNamespace>
-    <AssemblyName>GalaxyQuest</AssemblyName>
+    <RootNamespace>AutoSink</RootNamespace>
+    <AssemblyName>AutoSink</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
