@@ -38,7 +38,7 @@ namespace AutoSink
             {
                 string[] split = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.None);
                 // add new vertex with name is split[0] and toll is split[1]
-                vertices.Add(split[0],new Vertex(split[0], long.Parse(split[1])));
+                vertices.Add(split[0], new Vertex(split[0], long.Parse(split[1])));
             }
             // number of highway
             int h = Int32.Parse(Console.ReadLine());
@@ -55,12 +55,12 @@ namespace AutoSink
             dfs(vertices.First().Value);
 
             // descending order by post number
+            //var items = from pair in vertices
+            //            orderby pair.Value.post descending
+            //            select pair;
 
-            var items = from pair in vertices
-                        orderby pair.Value.post descending
-                        select pair;
-            //var order = vertices.Values.OrderByDescending(a => a.post).ToList();
-            var order = vertices.OrderByDescending(a => a.Value.post).ToList();
+            var order = vertices.Values.OrderByDescending(a => a.post).ToList();
+
             // number of trips
             int t = Int32.Parse(Console.ReadLine());
 
@@ -73,52 +73,51 @@ namespace AutoSink
 
                 String start = split[0];
                 String end = split[1];
-                // if departure and destination is the same return 0 for toll
+                // if departure and destination are at the same location return 0 for toll
                 if (start.Equals(end)) print.Add(0.ToString());
 
                 else
                 {
-                    int startIndex = order[start].;
-                    int endIndex = order.FindIndex(vertex => vertex.name.Equals(end));
+                    Vertex search = order.Find(vertex => vertex.name.Equals(end));
+                    Vertex searchStart = order.Find(vertex => vertex.name.Equals(start));
 
-                    // can't find path because no vertex from start to end
-                    if (startIndex > endIndex) print.Add("NO");
-                    else
+                    var list = new Dictionary<Vertex, long>();
+                    foreach (Vertex j in order)
                     {
-                        var list = new Dictionary<Vertex, long>();
-
-                        list.Add(order.ElementAt(startIndex), 0);
-                        // a list contains vertex and total travel toll at that vertex 
-                        // similar to the pseudocode you send me
-                        for (int j = startIndex + 1; j <= endIndex; j++)
-                        {
-                            // set every total toll to INF except departure point (0)
-                            list.Add(order.ElementAt(j), int.MaxValue);
-                        }
-                        // go through every vertex from departure to destination according to the 
-                        // post number 
-                        foreach (Vertex v in list.Keys.ToList())
-                        { 
-                            // go to each child vertex
-                            foreach (Vertex u in v.edges.ToList())
-                            {
-                                long newToll = list[v] + u.toll;
-                                list[u] = newToll < list[u] ? newToll : list[u];
-                            }
-                        }
-                        long toll = list.Last().Value;
-                        if (toll > 0) print.Add(toll.ToString());
-                        else print.Add("NO");
-
+                        // set every total toll to INF 
+                        list.Add(j, int.MaxValue);
                     }
-                }
+                    // only set startIndex's value as 0
+                    list[searchStart] = 0;
 
+                    // Start at startIndex first, then traverse as usual
+                    foreach (Vertex u in searchStart.edges.ToList())
+                    {
+                        long newToll = list[searchStart] + u.toll;
+                        list[u] = newToll < list[u] ? newToll : list[u];
+                    }
+
+                    // go through every vertex from departure to destination according to the 
+                    // post number 
+                    foreach (Vertex v in list.Keys.ToList())
+                    {
+                        // go to each child vertex
+                        foreach (Vertex u in v.edges.ToList())
+                        {
+                            long newToll = list[v] + u.toll;
+                            list[u] = newToll < list[u] ? newToll : list[u];
+                        }
+                    }
+                    long toll = list[search];
+                    if (toll == int.MaxValue) print.Add("NO");
+                    else print.Add(toll.ToString());
+                }
             }
 
             foreach (String s in print)
                 Console.WriteLine(s);
             Console.Read();
-            
+
         }
 
 
@@ -160,7 +159,7 @@ namespace AutoSink
 
             foreach (Vertex u in v.edges)
             {
-                if (u.visited == false) 
+                if (u.visited == false)
                     explore(G, u);
             }
             postvisit(v);
