@@ -17,3 +17,6 @@ C:\Users\Minh\Source\Repos\CS4150\Experiment\ArraySearch\bin\Debug\ArraySearch.p
 C:\Users\Minh\Source\Repos\CS4150\Experiment\ArraySearch\obj\x86\Debug\Experiment.csprojResolveAssemblyReference.cache
 C:\Users\u0975798\Source\Repos\CS4150\Experiment\ArraySearch\obj\x86\Debug\ArraySearch.exe
 C:\Users\u0975798\Source\Repos\CS4150\Experiment\ArraySearch\obj\x86\Debug\ArraySearch.pdb
+C:\Users\u0975798\Source\Repos\CS4150\Experiment\ArraySearch\bin\Debug\ArraySearch.exe
+C:\Users\u0975798\Source\Repos\CS4150\Experiment\ArraySearch\bin\Debug\ArraySearch.pdb
+C:\Users\u0975798\Source\Repos\CS4150\Experiment\ArraySearch\obj\x86\Debug\Experiment.csprojResolveAssemblyReference.cache

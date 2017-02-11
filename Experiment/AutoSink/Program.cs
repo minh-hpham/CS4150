@@ -11,31 +11,24 @@ namespace AutoSink
         public String name;
         public int pre, post;
         public bool visited;
-        public Vertex(String s)
+        public long toll;
+        public LinkedList<Vertex> edges;
+        public Vertex(String s, long t)
         {
             name = s;
+            toll = t;
             pre = 0;
             post = 0;
+            edges = new LinkedList<Vertex>();
         }
     }
 
-    class Tuple
-    {
-        public Vertex start, end;
-        public Tuple(Vertex s, Vertex e)
-        {
-            start = s;
-            end = e;
-        }
-        
-    }
 
     class Program
     {
 
-        public static int clock = 0;
-        public static List<Tuple> edges = new List<Tuple>();
-        public static Dictionary<Vertex, int> vertices = new Dictionary<Vertex, int>();
+        public static int clock = 1;
+        public static List<Vertex> vertices = new List<Vertex>();
         static void Main(string[] args)
         {
             // number of cities
@@ -44,8 +37,8 @@ namespace AutoSink
             for (int i = 0; i < n; i++)
             {
                 string[] split = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.None);
-                // (Key,value) is (city_name, toll)
-                vertices.Add(new Vertex(split[0]), Int32.Parse(split[1]));
+                // add new vertex with name is split[0] and toll is split[1]
+                vertices.Add(new Vertex(split[0], long.Parse(split[1])));
             }
             // number of highway
             int h = Int32.Parse(Console.ReadLine());
@@ -54,14 +47,23 @@ namespace AutoSink
             {
                 // each string is in format: "city1 city2". Unique
                 string[] split = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.None);
-                edges.Add(new Tuple(new Vertex(split[0]), new Vertex(split[1])));
+                // add edge to vertex with name = split[0]
+                vertices.Find(v => v.name.Equals(split[0])).edges.AddLast(vertices.Find(v => v.name.Equals(split[1])));
+
             }
+
+            dfs(vertices.First());
+
+            var order = from vertex in vertices
+                          orderby vertex.post descending
+                          select vertex;
+
 
             // number of trips
             int t = Int32.Parse(Console.ReadLine());
 
-            List<Vertex> order = dfs(vertices.Keys.First());
 
+            List<String> print = new List<string>();
             for (int i = 0; i < t; i++)
             {
                 // each string is in format: "city1 city2". Unique
@@ -70,33 +72,42 @@ namespace AutoSink
                 String start = split[0];
                 String end = split[1];
 
-                int startIndex = order.FindIndex(vertex => vertex.name.Equals(start));
-                int endIndex = order.FindIndex(vertex => vertex.name.Equals(end));
+                int startIndex = vertices.FindIndex(vertex => vertex.name.Equals(start));
+                int endIndex = vertices.FindIndex(vertex => vertex.name.Equals(end));
 
-                if (startIndex == endIndex) Console.WriteLine(0);
-                else if (startIndex > endIndex) Console.WriteLine("NO");
-
+                if (startIndex == endIndex) print.Add(0.ToString());
+                else if (startIndex > endIndex) print.Add("NO");
                 else
                 {
-                    int toll = 0;
+                    long toll = 0;
 
                     while (startIndex < endIndex)
                     {
-                        int tollOfVertex;
-                        vertices.TryGetValue(order.ElementAt(startIndex++), out tollOfVertex);
-                        toll += tollOfVertex;
+                        if (vertices.ElementAt(startIndex).edges.Count == 0)
+                        {
+                            toll = 0;
+                            break;
+                        }
+                        else
+                        {
+                            startIndex += 1;
+                            toll += vertices.ElementAt(startIndex).toll;
+                        }
+
                     }
-
-                    Console.WriteLine(toll);
+                    if (toll == 0) print.Add("NO");
+                    else print.Add(toll.ToString());
                 }
-                Console.Read();
-            }
-            
 
+            }
+
+            foreach (String s in print)
+                Console.WriteLine(s);
+            Console.Read();
 
         }
+       
 
-      
         // set prevalue for vertice
         private static void previsit(Vertex v)
         {
@@ -108,35 +119,22 @@ namespace AutoSink
             v.post = clock++;
         }
 
-        // get edges starting from v
-        private static List<Tuple> getEdgesFrom(Vertex v)
-        {
-            List<Tuple> result = new List<Tuple>();
-            foreach(Tuple t in edges)
-            {
-                if (t.start.Equals(v))
-                    result.Add(t);
-            }
-            
-            return result;
-        }
         // depth first search to find post value of each vertex
-        private static List<Vertex> dfs(Vertex G)
+        private static void dfs(Vertex G)
         {
-            foreach(Vertex v in vertices.Keys )
+            foreach (Vertex v in vertices)
             {
                 v.visited = false;
             }
-            foreach(Vertex v in vertices.Keys)
+            foreach (Vertex v in vertices)
             {
-                if(v.visited == false)
+                if (v.visited == false)
                 {
                     explore(G, v);
                 }
             }
 
-           List<Vertex> result = (List<Vertex>)vertices.Keys.OrderBy(i => i.post);
-            return result;
+            vertices.OrderBy(i => i.post);
         }
 
         private static void explore(Vertex G, Vertex v)
@@ -144,10 +142,8 @@ namespace AutoSink
             v.visited = true;
             previsit(v);
 
-            List<Tuple> edgesfromv = getEdgesFrom(v);
-            foreach(Tuple t in edgesfromv)
+            foreach (Vertex u in v.edges)
             {
-                Vertex u = t.end;
                 if (u.visited == false) // if(!visted[u]
                     explore(G, u);
             }
