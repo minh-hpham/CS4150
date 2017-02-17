@@ -3,3 +3,4 @@ C:\Users\Minh\Source\Repos\CS4150\Experiment\Rumor\bin\Debug\Rumor.exe
 C:\Users\Minh\Source\Repos\CS4150\Experiment\Rumor\bin\Debug\Rumor.pdb
 C:\Users\Minh\Source\Repos\CS4150\Experiment\Rumor\obj\Debug\Rumor.exe
 C:\Users\Minh\Source\Repos\CS4150\Experiment\Rumor\obj\Debug\Rumor.pdb
+C:\Users\Minh\Source\Repos\CS4150\Experiment\Rumor\obj\Debug\Rumor.csprojResolveAssemblyReference.cache

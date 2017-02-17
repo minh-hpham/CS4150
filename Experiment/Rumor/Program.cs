@@ -42,12 +42,9 @@ namespace Rumor
             for (int i = 0; i < r; i++)
             {
                 startRumor[i] = Console.ReadLine();
-            }
-
-            for (int i = 0; i < r; i++)
-            {
                 Console.WriteLine(bfs(vertices, startRumor[i]));
             }
+
             Console.Read();
         }
 
@@ -55,7 +52,7 @@ namespace Rumor
         {
             var dist = new Dictionary<Vertex, int>();
             var prev = new Dictionary<Vertex, Vertex>();
-            var list = new List<Vertex>();
+
 
             foreach (Vertex u in vertices.Values)
             {
@@ -71,7 +68,7 @@ namespace Rumor
             while (!(Q.Count == 0))
             {
                 Vertex u = Q.Dequeue();
-                list.Add(u);
+   
                 foreach(Vertex v in u.friends)
                 {
                     if(dist[v] == 100000)
@@ -83,12 +80,8 @@ namespace Rumor
                 }
             }
 
-            foreach (Vertex u in vertices.Values)
-            {
-                if(dist[u] == 100000)
-                    list.Add(u);
-            }
-            var sortResult = list.OrderBy(a => dist[a]).ThenBy(a => a.name).ToList();
+       
+            var sortResult = vertices.Values.OrderBy(a => dist[a]).ThenBy(a => a.name).ToList();
            
             StringBuilder sb = new StringBuilder();
             foreach (Vertex u in sortResult)
