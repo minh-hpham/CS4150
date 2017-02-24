@@ -126,7 +126,7 @@ namespace Experiment
         public static HashSet<String> makeList(int size)
         {
             HashSet<String> list = new HashSet<string>();
-            for (int i = 0; i < size; i*=2)
+            for (int i = 0; i < size; i *= 2)
             {
                 list.Add(RandomString(WORD_LENGTH));
             }
@@ -160,7 +160,7 @@ namespace Experiment
                 {
                     for (int d = 0; d < size; d++)
                     {
-                       // HashSet<String> list = makeList(d);
+                        // HashSet<String> list = makeList(d);
                         mrAnaga(data[d]);
                     }
                 }
