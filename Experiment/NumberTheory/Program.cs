@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-
+using System.Numerics;
 namespace NumberTheory
 {
     class Program
@@ -36,8 +34,15 @@ namespace NumberTheory
                 {
                     long n = long.Parse(split[1]);
                     long m = long.Parse(split[2]);
-                    long inv = inverse(n, m);
-                    string s = inv != -1 ? inv.ToString() : "none";
+                    BigInteger inv = inverse(n, m);
+                    string s;
+                    if (inv == -1) s = "none";
+                    else if (inv < 0)
+                    {
+                        inv += m;
+                        s = inv.ToString();
+                    }
+                    else s = inv.ToString();
                     Console.WriteLine(s);
 
                 }
@@ -55,11 +60,7 @@ namespace NumberTheory
                     Console.WriteLine(key(n, m));
 
                 }
-   
-
             }
-            //foreach (string s in print)
-            //    Console.WriteLine(s);
             Console.Read();
         }
 
@@ -83,19 +84,15 @@ namespace NumberTheory
             sb.Append(N);
             sb.Append(" ");
             long phi = (p - 1) * (q - 1);
-            HashSet<int> primes = getPrime(phi);
-            int e = 1;
-            if (primes.Contains(2) == false)
+       
+            int e = 2;
+            if (phi % e == 0)
             {
-                if (gcd(2, phi) == 1) e = 2;
-            }
-
-            else
-            {
+                e = 1;
                 while (true)
                 {
                     e += 2;
-                    if (primes.Contains(e) == false)
+                    if (phi % e != 0)
                     {
                         if (gcd(e, phi) == 1) break;
                     }
@@ -103,7 +100,8 @@ namespace NumberTheory
             }
             sb.Append(e);
             sb.Append(" ");
-            long P = inverse(e, phi);
+            BigInteger P = inverse(e, phi);
+            if (P < 0) P += phi;
             sb.Append(P);
 
             return sb.ToString();
@@ -120,36 +118,41 @@ namespace NumberTheory
             }
             return true;
         }
-        private static long[] ee(long a, long b)
+        private static BigInteger[] ee(BigInteger a, BigInteger b)
         {
             if (b == 0)
-                return new long[3] { 1, 0, a };
+                return new BigInteger[3] { 1, 0, a };
             else
             {
-                long[] r = ee(b, a % b);
-                return new long[3] { r[1], r[0] - (a / b) * r[1], r[2] };
+                
+                BigInteger[] r = ee(b, a % b);
+                BigInteger x = r[0];
+                BigInteger y = r[1];
+                BigInteger d = r[2];
+                return new BigInteger[3] {y, x-(a/b)*y,d };
             }
         }
-        private static long inverse(long a, long N)
+        private static BigInteger inverse(BigInteger a, BigInteger N)
         {
-            long[] r = ee(a, N);
+            BigInteger[] r = ee(a, N);
             if (r[2] == 1)
                 return r[0] % N;
             else
                 return -1;
         }
 
-        private static long exp(long n, long m, long N)
+        private static BigInteger exp(long x, long y, long N)
         {
-            if (m == 0)
+            if (y == 0)
                 return 1;
             else
             {
-                long z = exp(n, m / 2, N);
-                if (m % 2 == 0)
+                BigInteger z = exp(x, y / 2, N);
+
+                if (y % 2 == 0)
                     return (z * z) % N;
                 else
-                    return (n * z * z) % N;
+                    return (x * z * z) % N;
             }
         }
 

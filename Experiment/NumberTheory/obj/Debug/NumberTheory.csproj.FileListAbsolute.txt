@@ -4,3 +4,9 @@ C:\Users\u0975798\Source\Repos\CS4150\Experiment\NumberTheory\bin\Debug\NumberTh
 C:\Users\u0975798\Source\Repos\CS4150\Experiment\NumberTheory\obj\Debug\NumberTheory.csprojResolveAssemblyReference.cache
 C:\Users\u0975798\Source\Repos\CS4150\Experiment\NumberTheory\obj\Debug\NumberTheory.exe
 C:\Users\u0975798\Source\Repos\CS4150\Experiment\NumberTheory\obj\Debug\NumberTheory.pdb
+C:\Users\Minh\Source\Repos\CS4150\Experiment\NumberTheory\bin\Debug\NumberTheory.exe.config
+C:\Users\Minh\Source\Repos\CS4150\Experiment\NumberTheory\obj\Debug\NumberTheory.exe
+C:\Users\Minh\Source\Repos\CS4150\Experiment\NumberTheory\obj\Debug\NumberTheory.pdb
+C:\Users\Minh\Source\Repos\CS4150\Experiment\NumberTheory\bin\Debug\NumberTheory.exe
+C:\Users\Minh\Source\Repos\CS4150\Experiment\NumberTheory\bin\Debug\NumberTheory.pdb
+C:\Users\Minh\Source\Repos\CS4150\Experiment\NumberTheory\obj\Debug\NumberTheory.csprojResolveAssemblyReference.cache
