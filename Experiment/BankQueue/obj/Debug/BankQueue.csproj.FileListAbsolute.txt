@@ -1,0 +1,6 @@
+C:\Users\Minh\Source\Repos\CS4150\Experiment\BankQueue\bin\Debug\BankQueue.exe.config
+C:\Users\Minh\Source\Repos\CS4150\Experiment\BankQueue\bin\Debug\BankQueue.exe
+C:\Users\Minh\Source\Repos\CS4150\Experiment\BankQueue\bin\Debug\BankQueue.pdb
+C:\Users\Minh\Source\Repos\CS4150\Experiment\BankQueue\obj\Debug\BankQueue.csprojResolveAssemblyReference.cache
+C:\Users\Minh\Source\Repos\CS4150\Experiment\BankQueue\obj\Debug\BankQueue.exe
+C:\Users\Minh\Source\Repos\CS4150\Experiment\BankQueue\obj\Debug\BankQueue.pdb
