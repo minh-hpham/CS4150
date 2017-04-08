@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankQueue", "BankQueue\Bank
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderTheRainbow", "UnderTheRainbow\UnderTheRainbow.csproj", "{7044E459-A939-432A-A2C6-8A857CA54A32}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Narrow Art Gallery", "Narrow Art Gallery\Narrow Art Gallery.csproj", "{F1011365-B319-43F7-A01E-EB0206B63D8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -109,6 +111,14 @@ Global
 		{7044E459-A939-432A-A2C6-8A857CA54A32}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7044E459-A939-432A-A2C6-8A857CA54A32}.Release|x86.ActiveCfg = Release|Any CPU
 		{7044E459-A939-432A-A2C6-8A857CA54A32}.Release|x86.Build.0 = Release|Any CPU
+		{F1011365-B319-43F7-A01E-EB0206B63D8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1011365-B319-43F7-A01E-EB0206B63D8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1011365-B319-43F7-A01E-EB0206B63D8A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F1011365-B319-43F7-A01E-EB0206B63D8A}.Debug|x86.Build.0 = Debug|Any CPU
+		{F1011365-B319-43F7-A01E-EB0206B63D8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1011365-B319-43F7-A01E-EB0206B63D8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1011365-B319-43F7-A01E-EB0206B63D8A}.Release|x86.ActiveCfg = Release|Any CPU
+		{F1011365-B319-43F7-A01E-EB0206B63D8A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
