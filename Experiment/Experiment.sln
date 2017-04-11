@@ -25,7 +25,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderTheRainbow", "UnderThe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Narrow Art Gallery", "Narrow Art Gallery\Narrow Art Gallery.csproj", "{F1011365-B319-43F7-A01E-EB0206B63D8A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spiderman's Workout", "Spiderman's Workout\Spiderman's Workout.csproj", "{53C7EAA6-CEFA-4C66-ABF9-06A1C4D305BE}"
+EndProject
 Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|x86 = Debug|x86
@@ -119,12 +125,16 @@ Global
 		{F1011365-B319-43F7-A01E-EB0206B63D8A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F1011365-B319-43F7-A01E-EB0206B63D8A}.Release|x86.ActiveCfg = Release|Any CPU
 		{F1011365-B319-43F7-A01E-EB0206B63D8A}.Release|x86.Build.0 = Release|Any CPU
+		{53C7EAA6-CEFA-4C66-ABF9-06A1C4D305BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53C7EAA6-CEFA-4C66-ABF9-06A1C4D305BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53C7EAA6-CEFA-4C66-ABF9-06A1C4D305BE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{53C7EAA6-CEFA-4C66-ABF9-06A1C4D305BE}.Debug|x86.Build.0 = Debug|Any CPU
+		{53C7EAA6-CEFA-4C66-ABF9-06A1C4D305BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53C7EAA6-CEFA-4C66-ABF9-06A1C4D305BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53C7EAA6-CEFA-4C66-ABF9-06A1C4D305BE}.Release|x86.ActiveCfg = Release|Any CPU
+		{53C7EAA6-CEFA-4C66-ABF9-06A1C4D305BE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(SubversionScc) = preSolution
-		Svn-Managed = True
-		Manager = AnkhSVN - Subversion Support for Visual Studio
 	EndGlobalSection
 EndGlobal
