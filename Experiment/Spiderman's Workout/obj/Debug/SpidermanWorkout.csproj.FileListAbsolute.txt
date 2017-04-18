@@ -1,0 +1,6 @@
+C:\Users\Minh\Source\Repos\CS4150\Experiment\Spiderman's Workout\bin\Debug\SpidermanWorkout.exe.config
+C:\Users\Minh\Source\Repos\CS4150\Experiment\Spiderman's Workout\bin\Debug\SpidermanWorkout.exe
+C:\Users\Minh\Source\Repos\CS4150\Experiment\Spiderman's Workout\bin\Debug\SpidermanWorkout.pdb
+C:\Users\Minh\Source\Repos\CS4150\Experiment\Spiderman's Workout\obj\Debug\SpidermanWorkout.exe
+C:\Users\Minh\Source\Repos\CS4150\Experiment\Spiderman's Workout\obj\Debug\SpidermanWorkout.pdb
+C:\Users\Minh\Source\Repos\CS4150\Experiment\Spiderman's Workout\obj\Debug\SpidermanWorkout.csprojResolveAssemblyReference.cache

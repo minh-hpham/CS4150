@@ -1,0 +1,5 @@
+C:\Users\Minh\Source\Repos\CS4150\Experiment\Spiderman's Workout\bin\Debug\Spiderman's Workout.exe.config
+C:\Users\Minh\Source\Repos\CS4150\Experiment\Spiderman's Workout\bin\Debug\Spiderman's Workout.exe
+C:\Users\Minh\Source\Repos\CS4150\Experiment\Spiderman's Workout\bin\Debug\Spiderman's Workout.pdb
+C:\Users\Minh\Source\Repos\CS4150\Experiment\Spiderman's Workout\obj\Debug\Spiderman's Workout.exe
+C:\Users\Minh\Source\Repos\CS4150\Experiment\Spiderman's Workout\obj\Debug\Spiderman's Workout.pdb
